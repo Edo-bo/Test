@@ -19,7 +19,7 @@
 <body class="min-h-screen bg-black bg-cover bg-center" style="background-image: url('https://storage.googleapis.com/a1aa/image/212d8087-65bb-4165-5159-d389f7302193.jpg');">
   <div class="bg-black bg-opacity-70 min-h-screen flex flex-col items-center justify-center p-6 space-y-8">
     <div class="max-w-lg w-full bg-white bg-opacity-90 rounded-lg shadow-lg p-8 text-gray-900 relative">
-      <h1 class="text-4xl font-extrabold text-center mb-6 text-red-600 animate-pulse">💥PROMO💥</h1>
+      <h1 class="text-4xl font-extrabold text-center mb-6 text-red-600 animate-pulse">ðŸ’¥PROMOðŸ’¥</h1>
       <div class="space-y-3 text-center mb-8">
         <p class="text-xl font-semibold">7 HARI = <span id="price-7" class="text-green-700">10.000</span></p>
         <p class="text-xl font-semibold">14 HARI = <span id="price-14" class="text-green-700">20.000</span></p>
@@ -57,6 +57,7 @@
           <option value="21" data-price="30000">21 HARI = 30.000</option>
           <option value="28" data-price="40000">28 HARI = 40.000</option>
           <option value="35" data-price="50000">35 HARI = 50.000</option>
+          <option value="permanen" data-price="90000">PERMANEN HARI = 90.000</option>
         </select>
 
         <label for="botName" class="block text-lg font-semibold text-gray-900">Nama Bot WhatsApp : <span class="text-red-600">*</span></label>
@@ -85,7 +86,7 @@
           class="w-full border border-gray-400 rounded-md p-3 text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"
         ></textarea>
 
-        <label for="promo" class="block text-lg font-semibold text-gray-900">Kode Promo (kosong jika tidak ada):</label>
+        <label for="promo" class="block text-lg font-semibold text-gray-900">Kode Promo:</label>
         <input
           type="text"
           id="promo"
@@ -121,10 +122,10 @@
   <!-- Promo Spin Popup -->
   <div id="promoPopupOverlay" class="fixed inset-0 hidden items-center justify-center z-50">
     <div class="bg-white rounded-lg shadow-lg p-6 max-w-sm w-full text-center relative">
-      <h2 class="text-2xl font-bold mb-4">🎉 Spin Kode Promo Kamu! 🎉</h2>
-      <div id="spinner" class="text-4xl font-extrabold mb-6 select-none">🎡</div>
+      <h2 class="text-2xl font-bold mb-4">ðŸŽ‰ Spin Kode Promo Kamu! ðŸŽ‰</h2>
+      <div id="spinner" class="text-4xl font-extrabold mb-6 select-none">ðŸŽ¡</div>
       <button id="spinButton" class="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-md transition-colors duration-300">
-        Putar Sekarang 1�
+        Putar Sekarang 1×
       </button>
       <button id="closePopup" class="absolute top-2 right-3 text-gray-600 hover:text-gray-900 text-2xl font-bold">&times;</button>
     </div>
@@ -1575,11 +1576,11 @@
 
       const total = discountedPrice + adminFee;
 
-      let message = `Admin, saya ingin sewa:\n`;
-      message += `• Nama Bot WhatsApp : ${botName}\n`;
-      message += `• Nomor bot whatsapp : ${botNumber}\n`;
-      message += `• pesan untuk admin : ${messageAdmin || "-"}\n\n`;
-      message += `• kode promo : ${promoCode || "-"}\n\n`;
+      let message = `HALO ADMIN, saya ingin sewa bot:\n`;
+      message += `â€¢ Nama Bot WhatsApp : ${botName}\n`;
+      message += `â€¢ Nomor bot whatsapp : ${botNumber}\n`;
+      message += `â€¢ pesan untuk admin : ${messageAdmin || "-"}\n\n`;
+      message += `â€¢ kode promo : ${promoCode || "-"}\n\n`;
       message += `harga asli : ${formatPrice(basePrice)}\n`;
       message += `Harga setelah diskon : ${formatPrice(discountedPrice)}\n`;
       message += `Biaya admin : ${formatPrice(adminFee)}\n`;
